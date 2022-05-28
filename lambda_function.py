@@ -8,44 +8,44 @@ from boto3.dynamodb.conditions import Key
 
 
 def lambda_handler(event, context):
-    print(event)
-    dynamodb = boto3.resource("dynamodb", region_name="ap-south-1")
-    table = dynamodb.Table("shortener")
 
-    base_url = "myapp.com"
+    dynamodb = boto3.resource("dynamodb")
+    table = dynamodb.Table("url_shortener")
+
     date_time = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
 
     if event["routeKey"] == "POST /":
+        """create a short url"""
         data = json.loads(event["body"])
-        original_url = data["originalUrl"]
-        short_url = generate_short_id(original_url)
-        response = table.put_item(
+        url_long = data["url_long"]
+        url_short = generate_short_id(url_long)
+        table.put_item(
                 Item={
-                    "shortUrl": f"{base_url}/{short_url}",
-                    "originalUrl": original_url,
-                    "createdDate": date_time,
+                    "url_short": url_short,
+                    "url_long": url_long,
+                    "created_date": date_time,
                     "id": str(uuid.uuid4()),
                 }
             )
-        print("data_table: ", response)
-        return response
-        # return {
-        #     "statusCode": 201,
-        #     'body': json.dumps("URI has been created")
-        # }
+        response = table.get_item(
+            Key={
+                'url_short': url_short
+            }
+        )
+        return response['Item']
     
-    if event["routeKey"] == "GET /":
-        dynamo_responses = table.query(KeyConditionExpression=Key('shortUrl').eq(event["queryStringParameters"]["shortUrl"]))
-
-        print("dynamo_responses:", dynamo_responses['Items'][0])
-        return {
-            'statusCode': 200,
-            # 'data': json.dumps(dynamo_responses['Items'][0])
-            'data': dynamo_responses
-        }
+    elif event["routeKey"] == "GET /":
+        """get long url data with short url"""
+        response = table.get_item(
+            Key={
+                'url_short': event["queryStringParameters"]["url_short"]
+            }
+        )
+        return response['Item']
 
 
 def generate_short_id(url):
     """generate random keys for short ulrs"""
-    short_url = "".join(choices(string.ascii_letters + string.digits, k=6))
-    return short_url
+    base_url = "myapp.com/"
+    url_short = "".join(choices(string.ascii_letters + string.digits, k=6))
+    return base_url + url_short

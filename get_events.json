@@ -1,0 +1,37 @@
+{
+    "version":"2.0",
+    "routeKey":"GET /",
+    "rawPath":"/",
+    "rawQueryString":"",
+    "headers":{
+       "accept":"*/*",
+       "accept-encoding":"gzip, deflate, br",
+       "content-length":"0",
+       "host":"hv87jn10lk.execute-api.ap-south-1.amazonaws.com",
+       "postman-token":"4fe65850-2399-4f95-8195-f5f29b2636bd",
+       "user-agent":"PostmanRuntime/7.29.0",
+       "x-amzn-trace-id":"Root=1-6291060c-615d8feb54988a6c7206522c",
+       "x-forwarded-for":"27.147.234.213",
+       "x-forwarded-port":"443",
+       "x-forwarded-proto":"https"
+    },
+    "requestContext":{
+       "accountId":"966959053855",
+       "apiId":"hv87jn10lk",
+       "domainName":"hv87jn10lk.execute-api.ap-south-1.amazonaws.com",
+       "domainPrefix":"hv87jn10lk",
+       "http":{
+          "method":"GET",
+          "path":"/",
+          "protocol":"HTTP/1.1",
+          "sourceIp":"27.147.234.213",
+          "userAgent":"PostmanRuntime/7.29.0"
+       },
+       "requestId":"Sy3iAhpXBcwEPng=",
+       "routeKey":"GET /",
+       "stage":"$default",
+       "time":"27/May/2022:17:10:36 +0000",
+       "timeEpoch":1653671436699
+    },
+    "isBase64Encoded":false
+ }
