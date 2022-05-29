@@ -1,37 +1,51 @@
 {
-    "version":"2.0",
-    "routeKey":"GET /",
-    "rawPath":"/",
-    "rawQueryString":"",
-    "headers":{
-       "accept":"*/*",
-       "accept-encoding":"gzip, deflate, br",
-       "content-length":"0",
-       "host":"hv87jn10lk.execute-api.ap-south-1.amazonaws.com",
-       "postman-token":"4fe65850-2399-4f95-8195-f5f29b2636bd",
-       "user-agent":"PostmanRuntime/7.29.0",
-       "x-amzn-trace-id":"Root=1-6291060c-615d8feb54988a6c7206522c",
-       "x-forwarded-for":"27.147.234.213",
-       "x-forwarded-port":"443",
-       "x-forwarded-proto":"https"
-    },
-    "requestContext":{
-       "accountId":"966959053855",
-       "apiId":"hv87jn10lk",
-       "domainName":"hv87jn10lk.execute-api.ap-south-1.amazonaws.com",
-       "domainPrefix":"hv87jn10lk",
-       "http":{
-          "method":"GET",
-          "path":"/",
-          "protocol":"HTTP/1.1",
-          "sourceIp":"27.147.234.213",
-          "userAgent":"PostmanRuntime/7.29.0"
-       },
-       "requestId":"Sy3iAhpXBcwEPng=",
-       "routeKey":"GET /",
-       "stage":"$default",
-       "time":"27/May/2022:17:10:36 +0000",
-       "timeEpoch":1653671436699
-    },
-    "isBase64Encoded":false
- }
+   "version":"2.0",
+   "routeKey":"GET /{url_short}",
+   "rawPath":"/favicon.ico",
+   "rawQueryString":"",
+   "cookies":[
+      "awsccc=eyJlIjoxLCJwIjoxLCJmIjoxLCJhIjoxLCJpIjoiNWZjOGQzMWMtOTYwMy00ZmNiLWFlY2QtNzZkYThhMGY3MjhjIiwidiI6IjEifQ=="
+   ],
+   "headers":{
+      "accept":"image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+      "accept-encoding":"gzip, deflate, br",
+      "accept-language":"en-GB,en-US;q=0.9,en;q=0.8,bn;q=0.7,tr;q=0.6,fr;q=0.5,hi;q=0.4,pt;q=0.3,de;q=0.2",
+      "content-length":"0",
+      "dnt":"1",
+      "host":"qnl64gjs3e.execute-api.ap-south-1.amazonaws.com",
+      "referer":"https://qnl64gjs3e.execute-api.ap-south-1.amazonaws.com/myapp.com/H8BlXY",
+      "sec-ch-ua":"\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Google Chrome\";v=\"102\"",
+      "sec-ch-ua-mobile":"?0",
+      "sec-ch-ua-platform":"\"Windows\"",
+      "sec-fetch-dest":"image",
+      "sec-fetch-mode":"no-cors",
+      "sec-fetch-site":"same-origin",
+      "user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36",
+      "x-amzn-trace-id":"Root=1-629216af-50cd53de72d852ca6e4c8399",
+      "x-forwarded-for":"27.147.234.213",
+      "x-forwarded-port":"443",
+      "x-forwarded-proto":"https"
+   },
+   "requestContext":{
+      "accountId":"966959053855",
+      "apiId":"qnl64gjs3e",
+      "domainName":"qnl64gjs3e.execute-api.ap-south-1.amazonaws.com",
+      "domainPrefix":"qnl64gjs3e",
+      "http":{
+         "method":"GET",
+         "path":"/favicon.ico",
+         "protocol":"HTTP/1.1",
+         "sourceIp":"27.147.234.213",
+         "userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36"
+      },
+      "requestId":"S1h7fikWhcwEMuA=",
+      "routeKey":"GET /{url_short}",
+      "stage":"$default",
+      "time":"28/May/2022:12:33:51 +0000",
+      "timeEpoch":1653741231721
+   },
+   "pathParameters":{
+      "url_short":"favicon.ico"
+   },
+   "isBase64Encoded":false
+}
