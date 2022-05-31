@@ -2,7 +2,7 @@ import json
 import boto3
 
 
-def lambda_handler(event, context):
+def handler(event, context):
     print(event)
 
     dynamodb = boto3.resource("dynamodb")

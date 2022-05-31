@@ -3,11 +3,11 @@ import os
 
 import aws_cdk as cdk
 
-from cdk_python.cdk_python_stack import CdkPythonStack
+from cdk_stacks.cdk_python_stack import UrlShortenerStack
 
 
 app = cdk.App()
-CdkPythonStack(app, "CdkPythonStack",
+UrlShortenerStack(app, "UrlShortenerStack",
     # If you don't specify 'env', this stack will be environment-agnostic.
     # Account/Region-dependent features and context lookups will not work,
     # but a single synthesized template can be deployed anywhere.
